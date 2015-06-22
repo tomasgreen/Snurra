@@ -1,0 +1,76 @@
+@keyframes spinFadeInSpinner {
+	0%   { 
+		opacity: 0;
+		transform: scale(0.1); 
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+@keyframes spinFadeOutSpinner {
+	0%   { 
+		opacity: 1;
+		transform: scale(1); 
+	}
+	100% {
+		opacity: 0;
+		transform: scale(0.1);
+	}
+}
+@keyframes spinFadeInText {
+	0%   { 
+		opacity: 0;
+		transform: scale(2); 
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+@keyframes spinFadeOutText {
+	0%   { 
+		opacity: 1;
+		transform: scale(1); 
+	}
+	100% {
+		opacity: 0;
+		transform: scale(2);
+	}
+}
+.snurra {
+	position: relative;
+	.snurra-img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		padding: 0px;
+		margin: 0px;
+		opacity: 0;
+		fill: #fff;
+	}
+	.snurra-img-fadein{
+		animation-fill-mode: both;
+		animation-name: spinFadeInSpinner;
+		animation-duration: 0.25s;
+	}
+	.snurra-img-fadeout{
+		animation-fill-mode: both;
+		animation-name: spinFadeOutSpinner;
+		animation-duration: 0.25s;
+	}
+	.snurra-text {
+		padding: 0px;
+		margin: 0px;
+	}
+	.snurra-text-fadein {
+		animation-fill-mode: both;
+		animation-name: spinFadeInText;
+		animation-duration: 0.25s;
+	}
+	.snurra-text-fadeout {
+		animation-fill-mode: both;
+		animation-name: spinFadeOutText;
+		animation-duration: 0.25s;
+	}
+}
