@@ -1,5 +1,5 @@
 # Snurra
-Snurra - A JS button spinner
+Snurra - A JS spinner
 
 
 
@@ -31,7 +31,7 @@ get('my api call',function(data){
     /* finish up and save your instance for later use */
     btn.stop();
 });
-````
+```
 
 ## How about...
 The built in tap-event works well with desktop and touch devices.
