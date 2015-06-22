@@ -1,3 +1,4 @@
+require('./console')();
 var express = require('express'),
 	app = express(),
 	argv = require('yargs').argv,

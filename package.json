@@ -12,6 +12,7 @@
 		"uuid": "*",
 		"yargs": "*",
 		"gulp": "*",
+		"colors": "*",
 		"gulp-watch": "*",
 		"gulp-postcss": "*",
 		"gulp-rename": "*",
