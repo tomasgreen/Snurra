@@ -416,7 +416,7 @@ a:hover {
   background-color: #d64700;
   color: #fff;
 }
-.third-container pre {
+.third-container .example {
   background-color: #ffc2a3;
   color: #fff;
 }
