@@ -99,7 +99,7 @@ function example4() {
 	var btn = document.getElementById('example4');
 	_tapOn(btn,function(){
 		var s = new Snurra('#example4',{
-			spinner: '/static/bubbles.svg',
+			spinner: 'static/bubbles.svg',
 			maxSize: 40
 		});
 		setTimeout(function(){
@@ -118,7 +118,7 @@ function example5 () {
 }
 document.addEventListener('DOMContentLoaded', function () {
 	hljs.initHighlightingOnLoad();
-	Snurra.addSpinner('/static/bubbles.svg');
+	Snurra.addSpinner('static/bubbles.svg');
 	example1();
 	example2();
 	example3();
