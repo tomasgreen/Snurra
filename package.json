@@ -1,6 +1,6 @@
 {
 	"name": "snurra",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"private": true,
 	"author": "Tomas Green",
 	"license": "MIT",
@@ -19,7 +19,6 @@
 		"gulp-less": "*",
 		"gulp-concat": "*",
 		"gulp-minify-css": "*",
-		"gulp-rename": "*",
 		"gulp-streamify": "*",
 		"gulp-uglify": "*",
 		"gulp-autoprefixer": "*"

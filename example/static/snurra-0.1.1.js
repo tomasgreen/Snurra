@@ -6,6 +6,12 @@
 		default: svgString
 	};
 	
+	function _moveChildren(from,to){
+		if(!from.firstChild) return;
+		to.appendChild(from.firstChild);
+		_moveChildren(from,to);
+	}
+
 	function _setOptions(opt) {
 		if (opt === undefined || opt === null) opt = {};
 		var o = {};
@@ -157,11 +163,10 @@
 				
 		_addClass(this.el, 'snurra');
 		this.textEl = document.createElement('div');
-		this.textEl.innerHTML = this.el.innerHTML;
+		_moveChildren(this.el,this.textEl);
 		this.spinnerEl = (spinners[this.opt.spinner]) ? _toElement(spinners[this.opt.spinner]) : _toElement(spinners.default);
 		_addClass(this.textEl, 'snurra-text');
 		_addClass(this.spinnerEl, 'snurra-img');
-		this.el.innerHTML = '';
 		this.el.appendChild(this.textEl);
 		this.el.appendChild(this.spinnerEl);
 		var s = this.el.clientHeight - 6;
@@ -184,7 +189,9 @@
 		_addClass(this.textEl, 'snurra-text-fadein');
 		_addClass(this.spinnerEl, 'snurra-img-fadeout');
 		_one(this.textEl, _animationEndEvents, (function(ev){
-			this.el.innerHTML = this.textEl.innerHTML;
+			_moveChildren(this.textEl,this.el);
+			this.el.removeChild(this.textEl);
+			this.el.removeChild(this.spinnerEl);
 			_removeClass(this.el, 'snurra');
 			if (callback) callback(this);
 		}).bind(this));
