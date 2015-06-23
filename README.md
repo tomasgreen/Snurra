@@ -50,7 +50,7 @@ btn.onTap(function(ev){
 Add your own image to the stack and use it as a default.
 
 ```js					
-Snurra.addSpinner('static/bubbles.svg');
+Snurra.addSpinner('static/bubbles.svg',true);
 Snurra.gobals.maxSize = 40;
 ```
 
