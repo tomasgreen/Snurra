@@ -1,9 +1,11 @@
 # Snurra
 Snurra - A JS spinner
 
+[Demo and documentation.](http://www.tomasgreen.se/snurra/)
 
+---
 
-## Snurra and destroy!
+### Snurra and destroy!
 
 Requires no setup of fancy classes or containers and leaves nothing behind once destroyd.
 
@@ -18,7 +20,7 @@ get('my api call',function(data){
 });
 ```
 
-## Want to do it the hard way?
+### Want to do it the hard way?
 
 Pass an element or string as first argument and an object with your options in the other.
 
@@ -33,7 +35,7 @@ get('my api call',function(data){
 });
 ```
 
-## How about...
+### How about...
 The built in tap-event works well with desktop and touch devices.
 
 ```js
@@ -46,7 +48,7 @@ btn.onTap(function(ev){
 });
 ```
 
-## Custom SVGs
+### Custom SVGs
 Add your own image to the stack and use it as a default.
 
 ```js					
@@ -54,7 +56,7 @@ Snurra.addSpinner('static/bubbles.svg',true);
 Snurra.gobals.maxSize = 40;
 ```
 
-## Style with CSS
+### Style with CSS
 Change colors and more with CSS.
 
 ```css
