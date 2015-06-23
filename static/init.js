@@ -68,14 +68,14 @@ function _tapOn(el, func) {
 function example1() {
 	var btn = document.getElementById('example1');
 	_tapOn(btn,function(){
-		var s = new Snurra(btn);
+		var s = Snurra(btn);
 		setTimeout(function(){
 			s.destroy();
 		},3000);
 	});
 }
 function example2() {
-	var s = new Snurra('#example2',{
+	var s = Snurra('#example2',{
 		autoStart: false
 	});
 	_tapOn(s.el,function(){
@@ -86,7 +86,7 @@ function example2() {
 	});
 }
 function example3() {
-	var s = new Snurra('#example3',{
+	var s = Snurra('#example3',{
 		autoStart: false
 	});
 	s.onTap(function(){
@@ -98,7 +98,7 @@ function example3() {
 function example4() {
 	var btn = document.getElementById('example4');
 	_tapOn(btn,function(){
-		var s = new Snurra('#example4',{
+		var s = Snurra('#example4',{
 			spinner: 'static/bubbles.svg',
 			maxSize: 40
 		});
@@ -110,7 +110,7 @@ function example4() {
 function example5 () {
 	var btn = document.getElementById('example5');
 	_tapOn(btn,function(){
-		var s = new Snurra(btn);
+		var s = Snurra(btn);
 		setTimeout(function(){
 			s.destroy();
 		},3000);
@@ -123,5 +123,5 @@ document.addEventListener('DOMContentLoaded', function () {
 	example2();
 	example3();
 	example4();
-	example5();	
+	example5();
 });

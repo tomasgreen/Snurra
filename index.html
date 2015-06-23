@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta name="description" content="(hue +‎ -er) One who cries out or gives an alarm - Dependency free JavaScript modal library that can be used as an alert view replacement" />
-	<meta name="keywords" content="javascript, modal, alert, dependecy free, github, mit license" />
+	<meta name="description" content="Snurra - A JS spinner" />
+	<meta name="keywords" content="javascript, spinner, loader, dependecy free, github, mit license" />
 	<meta name="author" content="Tomas Green" />
 	<title>Snurra!</title>
 	<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
 	<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/styles/github.min.css">
 	<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="static/snurra-0.1.0.min.css?v=0.1.0-build1">
-	<link rel="stylesheet" type="text/css" href="static/style.css?v=0.1.0-build1">
+	<link rel="stylesheet" type="text/css" href="static/snurra-0.1.1.min.css?v=0.1.1-build1">
+	<link rel="stylesheet" type="text/css" href="static/style.css?v=0.1.1-build1">
 </head>
 <body>
 	<div class="site">
@@ -28,7 +28,7 @@
 		<div class="row-container first-container">
 			<div class="row title">
 				<div class="col">
-					<h2>Snurra - A JS button spinner</h2>
+					<h2>Snurra - A JS spinner</h2>
 					<ul>
 						<li>Dependency free</li>
 						<li>About 10 KB miminized including css</li>
@@ -99,7 +99,7 @@ btn.onTap(function(ev){
 					<!-- example 4 -->
 					<h2>Custom SVGs</h2>
 					<p>Add your own image to the stack and use it as a default.</p>
-					<div class="example"><pre><code class="js">Snurra.addSpinner('static/bubbles.svg');
+					<div class="example"><pre><code class="js">Snurra.addSpinner('static/bubbles.svg', true);
 Snurra.gobals.maxSize = 40;
 </code></pre></div>
 					<p><button class="btn btn-green" id="example4">Press to Snurra!</button></p>
@@ -220,7 +220,7 @@ Snurra.gobals.maxSize = 40;
 							<td>Enables/Disabels if the Snurra should start directly once tapped/clicked</td>
 						</tr>
 						<tr>
-							<td>onTap <small>bool</small>
+							<td>onTap <small>function</small>
 								<br><small>(default: null) </small>
 							</td>
 							<td>Adds a tap/click listener to the root-element.</td>
@@ -244,7 +244,7 @@ Snurra.gobals.maxSize = 40;
 		</div>
 	</div>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/highlight.min.js"></script>
-	<script src="static/snurra-0.1.0.min.js?v=0.1.0-build1"></script>
-	<script src="static/init.js?v=0.1.0-build1" type="text/javascript"> </script>
+	<script src="static/snurra-0.1.1.min.js?v=0.1.1-build1"></script>
+	<script src="static/init.js?v=0.1.1-build1" type="text/javascript"> </script>
 </body>
 </html>
