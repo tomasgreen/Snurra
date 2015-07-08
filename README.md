@@ -6,7 +6,7 @@ Snurra - A JS spinner
 
 ## P.S
 
-Apparently this library does not work with IE, at all. Something todo with adding classes to SVG's or even animating SVG's. Not sure how this happend but I'll look in to it at some point.
+Apparently this library does not work with IE, at all. Something to do with adding classes to SVG's or even animating SVG's. Not sure how this happend but I'll look in to it at some point.
 
 ---
 
