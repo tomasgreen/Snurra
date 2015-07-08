@@ -3,6 +3,11 @@ Snurra - A JS spinner
 
 [Demo and documentation.](http://www.tomasgreen.se/snurra/)
 
+
+## P.S
+
+Apparently this library does not work with IE, at all. Something todo with adding classes to SVG's or even animating SVG's. Not sure how this happend but I'll look in to it at some point.
+
 ---
 
 ### Snurra and destroy!
@@ -51,7 +56,7 @@ btn.onTap(function(ev){
 ### Custom SVGs
 Add your own image to the stack and use it as a default.
 
-```js					
+```js
 Snurra.addSpinner('static/bubbles.svg',true);
 Snurra.gobals.maxSize = 40;
 ```
