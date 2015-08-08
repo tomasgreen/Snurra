@@ -1,11 +1,11 @@
 (function () {
 	'use strict';
-	var _animationEndEvents = 'webkitAnimationEnd mozAnimationEnd msAnimationEnd oAnimationEnd animationend',
-		svgString = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"><path opacity=".1" d="M15 0 H17 V8 H15 z" transform="rotate(0 16 16)"><animate restart="whenNotActive" attributeName="opacity" from="1" to=".1" dur="1s" repeatCount="indefinite" begin="0"/></path><path opacity=".1" d="M15 0 H17 V8 H15 z" transform="rotate(22.5 16 16)"><animate restart="whenNotActive" attributeName="opacity" from="1" to=".1" dur="1s" repeatCount="indefinite" begin="0.0625s"/></path><path opacity=".1" d="M15 0 H17 V8 H15 z" transform="rotate(45 16 16)"><animate restart="whenNotActive" attributeName="opacity" from="1" to=".1" dur="1s" repeatCount="indefinite" begin="0.125s"/></path><path opacity=".1" d="M15 0 H17 V8 H15 z" transform="rotate(67.5 16 16)"><animate restart="whenNotActive" attributeName="opacity" from="1" to=".1" dur="1s" repeatCount="indefinite" begin="0.1875s"/></path><path opacity=".1" d="M15 0 H17 V8 H15 z" transform="rotate(90 16 16)"><animate restart="whenNotActive" attributeName="opacity" from="1" to=".1" dur="1s" repeatCount="indefinite" begin="0.25s"/></path><path opacity=".1" d="M15 0 H17 V8 H15 z" transform="rotate(112.5 16 16)"><animate restart="whenNotActive" attributeName="opacity" from="1" to=".1" dur="1s" repeatCount="indefinite" begin="0.3125s"/></path><path opacity=".1" d="M15 0 H17 V8 H15 z" transform="rotate(135 16 16)"><animate restart="whenNotActive" attributeName="opacity" from="1" to=".1" dur="1s" repeatCount="indefinite" begin="0.375s"/></path><path opacity=".1" d="M15 0 H17 V8 H15 z" transform="rotate(157.5 16 16)"><animate restart="whenNotActive" attributeName="opacity" from="1" to=".1" dur="1s" repeatCount="indefinite" begin="0.4375s"/></path><path opacity=".1" d="M15 0 H17 V8 H15 z" transform="rotate(180 16 16)"><animate restart="whenNotActive" attributeName="opacity" from="1" to=".1" dur="1s" repeatCount="indefinite" begin="0.5s"/></path><path opacity=".1" d="M15 0 H17 V8 H15 z" transform="rotate(202.5 16 16)"><animate restart="whenNotActive" attributeName="opacity" from="1" to=".1" dur="1s" repeatCount="indefinite" begin="0.5625s"/></path><path opacity=".1" d="M15 0 H17 V8 H15 z" transform="rotate(225 16 16)"><animate restart="whenNotActive" attributeName="opacity" from="1" to=".1" dur="1s" repeatCount="indefinite" begin="0.625s"/></path><path opacity=".1" d="M15 0 H17 V8 H15 z" transform="rotate(247.5 16 16)"><animate restart="whenNotActive" attributeName="opacity" from="1" to=".1" dur="1s" repeatCount="indefinite" begin="0.6875s"/></path><path opacity=".1" d="M15 0 H17 V8 H15 z" transform="rotate(270 16 16)"><animate restart="whenNotActive" attributeName="opacity" from="1" to=".1" dur="1s" repeatCount="indefinite" begin="0.75s"/></path><path opacity=".1" d="M15 0 H17 V8 H15 z" transform="rotate(292.5 16 16)"><animate restart="whenNotActive" attributeName="opacity" from="1" to=".1" dur="1s" repeatCount="indefinite" begin="0.8125s"/></path><path opacity=".1" d="M15 0 H17 V8 H15 z" transform="rotate(315 16 16)"><animate restart="whenNotActive" attributeName="opacity" from="1" to=".1" dur="1s" repeatCount="indefinite" begin="0.875s"/></path><path opacity=".1" d="M15 0 H17 V8 H15 z" transform="rotate(337.5 16 16)"><animate restart="whenNotActive" attributeName="opacity" from="1" to=".1" dur="1s" repeatCount="indefinite" begin="0.9375s"/></path></svg>';
+	var _animationEndEvents = 'webkitAnimationEnd mozAnimationEnd msAnimationEnd oAnimationEnd animationend',svgString = '<svg id="loading" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"><style>@-webkit-keyframes animSpin { 0% {opacity: 1;} 100% {opacity: 0.1;} }@keyframes animSpin { 0% {opacity: 1;} 100% {opacity: 0.1;} }.animSpin {-webkit-animation-name: animSpin;-webkit-animation-iteration-count: infinite;-webkit-animation-duration: 1s;animation-name: animSpin;animation-iteration-count: infinite;animation-duration: 1s;opacity: 0.1;}</style><path d="M15 0 H17 V8 H15 z" transform="rotate(0 16 16)" class="animSpin" style="-webkit-animation-delay: 0s; animation-delay: 0s"></path><path d="M15 0 H17 V8 H15 z" transform="rotate(22.5 16 16)" class="animSpin" style="-webkit-animation-delay: 0.0625s; animation-delay: 0.0625s"></path><path d="M15 0 H17 V8 H15 z" transform="rotate(45 16 16)" class="animSpin" style="-webkit-animation-delay: 0.125s; animation-delay: 0.125s"></path><path d="M15 0 H17 V8 H15 z" transform="rotate(67.5 16 16)" class="animSpin" style="-webkit-animation-delay: 0.1875s; animation-delay: 0.1875s"></path><path d="M15 0 H17 V8 H15 z" transform="rotate(90 16 16)" class="animSpin" style="-webkit-animation-delay: 0.25s; animation-delay: 0.25s"></path><path d="M15 0 H17 V8 H15 z" transform="rotate(112.5 16 16)" class="animSpin" style="-webkit-animation-delay: 0.3125s; animation-delay: 0.3125s"></path><path d="M15 0 H17 V8 H15 z" transform="rotate(135 16 16)" class="animSpin" style="-webkit-animation-delay: 0.375s; animation-delay: 0.375s"></path><path d="M15 0 H17 V8 H15 z" transform="rotate(157.5 16 16)" class="animSpin" style="-webkit-animation-delay: 0.4375s; animation-delay: 0.4375s"></path><path d="M15 0 H17 V8 H15 z" transform="rotate(180 16 16)" class="animSpin" style="-webkit-animation-delay: 0.5s; animation-delay: 0.5s"></path><path d="M15 0 H17 V8 H15 z" transform="rotate(202.5 16 16)" class="animSpin" style="-webkit-animation-delay: 0.5625s; animation-delay: 0.5625s"></path><path d="M15 0 H17 V8 H15 z" transform="rotate(225 16 16)" class="animSpin" style="-webkit-animation-delay: 0.625s; animation-delay: 0.625s"></path><path d="M15 0 H17 V8 H15 z" transform="rotate(247.5 16 16)" class="animSpin" style="-webkit-animation-delay: 0.6875s; animation-delay: 0.6875s"></path><path d="M15 0 H17 V8 H15 z" transform="rotate(270 16 16)" class="animSpin" style="-webkit-animation-delay: 0.75s; animation-delay: 0.75s"></path><path d="M15 0 H17 V8 H15 z" transform="rotate(292.5 16 16)" class="animSpin" style="-webkit-animation-delay: 0.8125s; animation-delay: 0.8125s"></path><path d="M15 0 H17 V8 H15 z" transform="rotate(315 16 16)" class="animSpin" style="-webkit-animation-delay: 0.875s; animation-delay: 0.875s"></path><path d="M15 0 H17 V8 H15 z" transform="rotate(337.5 16 16)" class="animSpin" style="-webkit-animation-delay: 0.9375s; animation-delay: 0.9375s"></path></svg>';
+	
 	var spinners = {
 		default: svgString
 	};
-	
+
 	function _moveChildren(from,to){
 		if(!from.firstChild) return;
 		to.appendChild(from.firstChild);
@@ -94,7 +94,7 @@
 	function _tapOff(el, func) {
 		_off(el, 'touchstart touchend touchcancel click', func);
 	}
-	
+
 	function _addClass(els, cls) {
 		_each(els, function (el) {
 			if (el.classList) {
@@ -112,7 +112,7 @@
 			} else el.className = el.className.replace(new RegExp('(^|\\b)' + cls.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
 		});
 	}
-	
+
 	function _attr(els, attrib, value) {
 		if (value === undefined && els && els.getAttribute !== undefined) return els.getAttribute(attrib);
 		_each(els, function (el) {
@@ -133,7 +133,7 @@
 	function _isString(obj) {
 		return (typeof obj === 'string');
 	}
-		
+
 	/* ************************************
 	############### SNURRA ################
 	************************************ */
@@ -160,7 +160,7 @@
 	};
 	Base.prototype.start = function () {
 		if (_attr(this.el, 'data-spinning')) return;
-				
+
 		_addClass(this.el, 'snurra');
 		this.textEl = document.createElement('div');
 		_moveChildren(this.el,this.textEl);
@@ -211,7 +211,7 @@
 			u: useCapture
 		});
 	};
-	
+
 	Base.prototype.on = function (events,callback,useCapture) {
 		this.pushEvent.push(events,callback,useCapture);
 		_on(this.el,events,callback,useCapture);
@@ -223,21 +223,21 @@
 	Base.prototype.onTap = function (callback) {
 		this.opt.onTap = callback;
 		if(this.onTapEvent) this.tapOff();
-		if(this.opt.autoStartOnTap !== false) this.opt.autoStartOnTap = true;  
+		if(this.opt.autoStartOnTap !== false) this.opt.autoStartOnTap = true;
 		this.onTapEvent = function(ev){
 			if(this.opt.autoStartOnTap) this.start();
 			this.opt.onTap(ev);
 		};
 		_tapOn(this.el,this.onTapEvent.bind(this));
 	};
-	
+
 	Base.prototype.tapOff = function () {
 		_tapOff(this.el,this.onTapEvent);
 	};
 	Base.prototype.off = function (events,callback,useCapture) {
 		_off(this.el,events,callback,useCapture);
 	};
-	
+
 	var scope = this;
 	scope.Snurra = function (el, options) {
 		var instance = new Base(el, options);
