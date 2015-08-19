@@ -6,8 +6,8 @@ Snurra - A JS spinner
 
 ## P.S
 
-Apparently this library does not work with IE, at all. Something to do with adding classes to SVG's or even animating SVG's. This is new to me and not something I'll fix. So any IE fan will have to wait for EDGE or use ladda (if it works?).
----
+Apparently this library does not work with IE, at all. I'll get to the JS bugs at some point but for now the biggest issue is animated SVG-files, they simply won't work in IE or Edge. However, the original spinner does work with edge since I've ported it to HTML, if you want to use your own spinner I'd suggest you do the same.
+
 
 ### Snurra and destroy!
 
