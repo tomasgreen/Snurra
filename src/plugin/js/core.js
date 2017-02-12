@@ -132,7 +132,7 @@
 		this.el = el;
 		if (this.opt.onClick) {
 			this.opt.autoStart = false;
-			this.tapOn(this.opt.onClick);
+			this.onClick(this.opt.onClick);
 		}
 		this.eventListeners = [];
 		if (this.opt.autoStart) this.start();
@@ -144,12 +144,12 @@
 		_addClass(this.el, 'snurra');
 		this.textEl = document.createElement('div');
 		_moveChildren(this.el, this.textEl);
-		
+
 		this.wrapperEl = document.createElement('div');
 		this.wrapperEl.appendChild(spinner);
 		_addClass(this.textEl, 'snurra-text');
 		_addClass(this.wrapperEl, 'snurra-img');
-		
+
 		this.el.appendChild(this.textEl);
 		this.el.appendChild(this.wrapperEl);
 		var s = this.el.clientHeight - 6; // -6??
@@ -157,7 +157,7 @@
 		_attr(this.el, 'data-spinning', true);
 		_attr(spinner, 'height', s);
 		_attr(spinner, 'width', s);
-		
+
 		this.wrapperEl.style.width = s + 'px';
 		this.wrapperEl.style.height = s + 'px';
 		this.wrapperEl.style.marginLeft = '-' + _toInt(s / 2) + 'px';
@@ -182,6 +182,13 @@
 			if (callback) callback(this);
 		}).bind(this));
 	};
+	Base.prototype.disable = function () {
+		_attr(this.el, 'disabled', 'true');
+	};
+	Base.prototype.enable = function () {
+		if (_attr(this.el, 'data-spinning')) this.stop()
+		else _removeAttr(this.el, 'disabled');
+	};
 	Base.prototype.destroy = function (callback) {
 		this.stop(callback);
 		for (var e in this.eventListeners) {
@@ -197,7 +204,6 @@
 			u: useCapture
 		});
 	};
-
 	Base.prototype.on = function (events, callback, useCapture) {
 		this.pushEvent.push(events, callback, useCapture);
 		_on(this.el, events, callback, useCapture);

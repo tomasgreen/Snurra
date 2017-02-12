@@ -41,7 +41,7 @@ get('my api call',function(data){
 ```
 
 ### How about...
-The built in tap-event works well with desktop and touch devices.
+The built in click-event works well with desktop and touch devices.
 
 ```js
 Snurra.globals.autoStart = false;
