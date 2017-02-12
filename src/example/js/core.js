@@ -46,23 +46,7 @@ function _stopEventPropagation(e) {
 }
 
 function _tapOn(el, func) {
-	if (el.ontouchstart === undefined) {
-		_on(el, 'click', func);
-		return;
-	}
-	var t = false;
-	_on(el, 'touchstart', function (ev) {
-		t = true;
-	});
-	_on(el, 'touchend', function (ev) {
-		if (t) {
-			func(ev);
-			_stopEventPropagation(ev);
-		}
-	});
-	_on(el, 'touchcancel touchleave touchmove', function (ev) {
-		t = false;
-	});
+	_on(el, 'click', func);
 }
 
 function example1() {
@@ -89,7 +73,7 @@ function example3() {
 	var s = Snurra('#example3',{
 		autoStart: false
 	});
-	s.onTap(function(){
+	s.onClick(function(){
 		setTimeout(function(){
 			s.stop();
 		},3000);

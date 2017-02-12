@@ -6,7 +6,8 @@ Snurra - A JS spinner
 
 ## P.S
 
-Apparently this library does not work with IE, at all. I'll get to the JS bugs at some point but for now the biggest issue is animated SVG-files, they simply won't work in IE or Edge. However, the original spinner does work with edge since I've ported it to using CSS-animations, if you want to use your own spinner I'd suggest you do the same.
+The issues with IE has been fixed by wrapper all SVG elements in a div, 
+this means that any CSS manipulation needs to include a svg element. More info down below.
 
 
 ### Snurra and destroy!
@@ -45,7 +46,7 @@ The built in tap-event works well with desktop and touch devices.
 ```js
 Snurra.globals.autoStart = false;
 var btn = Snurra('#myButton');
-btn.onTap(function(ev){
+btn.onClick(function(ev){
     get('my api call',function(data){
         btn.stop();
     });
@@ -64,7 +65,7 @@ Snurra.gobals.maxSize = 40;
 Change colors and more with CSS.
 
 ```css
-.btn-red .snurra-img {
+.btn-red .snurra-img svg {
     fill: yellow
 }
 ```

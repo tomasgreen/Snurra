@@ -11,8 +11,9 @@
 	<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
 	<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/styles/github.min.css">
 	<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="static/snurra-0.1.1.min.css?v=0.1.1-build1">
-	<link rel="stylesheet" type="text/css" href="static/style.css?v=0.1.1-build1">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/spinkit/1.2.5/spinkit.min.css">
+	<link rel="stylesheet" type="text/css" href="static/snurra-0.1.2.css?v=0.1.2-build1">
+	<link rel="stylesheet" type="text/css" href="static/style.css?v=0.1.2-build1">
 </head>
 <body>
 	<div class="site">
@@ -101,13 +102,14 @@ btn.onTap(function(ev){
 					<p>Add your own image to the stack and use it as a default.</p>
 					<div class="example"><pre><code class="js">Snurra.addSpinner('static/bubbles.svg', true);
 Snurra.gobals.maxSize = 40;
+//Snurra.addStringSpinner('spinnername','the inline svg code' true);
 </code></pre></div>
 					<p><button class="btn btn-green" id="example4">Press to Snurra!</button></p>
 					
 					<!-- example 5 -->
 					<h2>Style with CSS</h2>
 					<p>Change colors and more with CSS.</p>
-					<div class="example"><pre><code class="css">.btn-red .snurra-img {
+					<div class="example"><pre><code class="css">.btn-red .snurra-img svg {
     fill: yellow
 }</code></pre></div>
 					<p><button class="btn btn-red" id="example5"><i class="fa fa-chevron-right"></i> Works well with icons <i class="fa fa-chevron-left"></i></button></p>
@@ -155,12 +157,12 @@ Snurra.gobals.maxSize = 40;
 							<td>Adds a listener to the root-element, once done the listener is removed.</td>
 						</tr>
 						<tr>
-							<td>onTap(function)</td>
-							<td>Adds a tap/click listener to the root-element.</td>
+							<td>onClick(function)</td>
+							<td>Adds a click listener to the root-element.</td>
 						</tr>
 						<tr>
-							<td>tapOff(function)</td>
-							<td>Removes a tap/click listener to the root-element.</td>
+							<td>offClick(function)</td>
+							<td>Removes a click listener to the root-element.</td>
 						</tr>
 					</tbody>
 				</table>
@@ -181,6 +183,10 @@ Snurra.gobals.maxSize = 40;
 					<tbody>
 						<tr>
 							<td>Snurra.addSpinner(url,setAsDefault)</td>
+							<td>Downloads and adds a new spinner image. setAsDefault is optional. Calling this function should be done soon after the page is loaded.</td>
+						</tr>
+						<tr>
+							<td>Snurra.addStringSpinner(name,string,setAsDefault)</td>
 							<td>Downloads and adds a new spinner image. setAsDefault is optional. Calling this function should be done soon after the page is loaded.</td>
 						</tr>
 					</tbody>
@@ -244,7 +250,7 @@ Snurra.gobals.maxSize = 40;
 		</div>
 	</div>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/highlight.min.js"></script>
-	<script src="static/snurra-0.1.1.min.js?v=0.1.1-build1"></script>
-	<script src="static/init.js?v=0.1.1-build1" type="text/javascript"> </script>
+	<script src="static/snurra-0.1.2.js?v=0.1.2-build1"></script>
+	<script src="static/init.js?v=0.1.2-build1" type="text/javascript"> </script>
 </body>
 </html>
